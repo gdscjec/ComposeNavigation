@@ -1,8 +1,8 @@
-# Tip-Calculator  <img src="Images/Kotlin_Icon.png" width="25">
+# Compose-Navigation  <img src="Images/Kotlin_Icon.png" width="25">
 <img src="Images/jc_logo.png" width="90">
 
 # About-
-Tip Calculator is made with Jetpack Compose which calculates Tip based on the cost of service.
+Compose-Navigation is a basic two screen navigation apk (made for beginners).
 
 # Screenshots-
 <img src="Images/tip_calculator_01.png" width="100">.....<img src="Images/tip_calculator_02.png" width="100">.....<img src="Images/tip_calculator_03.png" width="100">
@@ -15,5 +15,5 @@ Tip Calculator is made with Jetpack Compose which calculates Tip based on the co
 3. Make sure to edit ***Contributing.md*** for successful participation.
 
 # Tasks-
-1. Add Top Bar for app name.
-2. Stylize the App by Standard Theming Process i.e. (Fonts, Typography, Colors, Drawables)
+1. Complete Navigation() composable to make the App Navigate to another screen with a passed argument.
+2. Implement a function in Screens.kt always returns a String, that appends the passed argument.
