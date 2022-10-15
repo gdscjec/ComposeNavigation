@@ -22,6 +22,18 @@ fun Navigation() {
         composable(route = Screens.HomeScreen.route) {
             HomeScreen(navController = navController)
         }
+
+//        DetailScreen Composable Navigation
+        composable(route = Screens.DetailScreen.route + "/{name}",
+            arguments = listOf(
+                navArgument("name") {
+                    type = NavType.StringType
+                    defaultValue = "Atul"
+                    nullable = true
+                }
+            )) { entry ->
+            entry.arguments?.getString("name")?.let { DetailScreen(name = it) }
+        }
     }
 }
 
@@ -44,7 +56,7 @@ fun HomeScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(8.dp))
         Button(
             onClick = {
-                navController.navigate(Screens.DetailScreen.route)
+                navController.navigate(Screens.DetailScreen.withArgs(text))
             },
             modifier = Modifier.align(Alignment.End)) {
             Text(text = "To Detail Screen")
